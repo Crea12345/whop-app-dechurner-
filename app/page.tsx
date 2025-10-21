@@ -1,111 +1,63 @@
-export default function Page() {
-	return (
-		<div className="min-h-screen bg-gray-a12 py-12 px-4 sm:px-6 lg:px-8">
-			<div className="max-w-3xl mx-auto">
-				<div className="text-center mb-12">
-					<h1 className="text-8 font-bold text-gray-9 mb-4">
-						Welcome to Your Whop App
-					</h1>
-					<p className="text-4 text-gray-6">
-						Follow these steps to get started with your Whop application
-					</p>
-				</div>
+import { ChurnPredictionForm } from "@/components/churn-prediction-form"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
-				<div className="space-y-8">
-					<div className="bg-white p-6 rounded-lg shadow-md">
-						<h2 className="text-5 font-semibold text-gray-9 mb-4 flex items-center">
-							<span className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-accent-9 text-white mr-3">
-								1
-							</span>
-							Create your Whop app
-						</h2>
-						<p className="text-gray-6 ml-11">
-							Go to your{" "}
-							<a
-								href="https://whop.com/dashboard"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="text-accent-9 hover:text-accent-10 underline"
-							>
-								Whop Dashboard
-							</a>{" "}
-							and create a new app in the Developer section.
-						</p>
-					</div>
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-background">
+      <div className="border-b border-border bg-card">
+        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center">
+              <span className="text-white font-bold text-sm">D</span>
+            </div>
+            <span className="font-semibold text-lg">Dechurner</span>
+          </div>
+          <Link href="/dashboard">
+            <Button variant="outline" size="sm">
+              CRM Dashboard
+            </Button>
+          </Link>
+        </div>
+      </div>
 
-					<div className="bg-white p-6 rounded-lg shadow-md">
-						<h2 className="text-5 font-semibold text-gray-9 mb-4 flex items-center">
-							<span className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-accent-9 text-white mr-3">
-								2
-							</span>
-							Set up environment variables
-						</h2>
-						<p className="text-gray-6 ml-11 mb-4">
-							Copy the .env file from your dashboard and create a new .env file
-							in your project root. This will contain all the necessary
-							environment variables for your app.
-						</p>
-						{process.env.NODE_ENV === "development" && (
-							<div className="text-gray-6 ml-11">
-								<pre>
-									<code>
-										WHOP_API_KEY={process.env.WHOP_API_KEY?.slice(0, 5)}...
-										<br />
-										NEXT_PUBLIC_WHOP_AGENT_USER_ID=
-										{process.env.NEXT_PUBLIC_WHOP_AGENT_USER_ID}
-										<br />
-										NEXT_PUBLIC_WHOP_APP_ID=
-										{process.env.NEXT_PUBLIC_WHOP_APP_ID}
-										<br />
-										NEXT_PUBLIC_WHOP_COMPANY_ID=
-										{process.env.NEXT_PUBLIC_WHOP_COMPANY_ID}
-									</code>
-								</pre>
-							</div>
-						)}
-					</div>
+      <div className="max-w-md mx-auto">
+        <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white p-8 pb-6">
+          <div className="space-y-4">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-medium">
+              <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
+              Universal Churn Prediction
+            </div>
+            <h1 className="text-3xl font-bold tracking-tight text-balance">
+              Predict customer churn across any digital business
+            </h1>
+            <p className="text-sm text-slate-300 leading-relaxed">
+              From SaaS to courses, memberships to newsletters. One calculator, infinite applications.
+            </p>
+          </div>
 
-					<div className="bg-white p-6 rounded-lg shadow-md">
-						<h2 className="text-5 font-semibold text-gray-9 mb-4 flex items-center">
-							<span className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-accent-9 text-white mr-3">
-								3
-							</span>
-							Install your app into your whop
-						</h2>
-						<p className="text-gray-6 ml-11">
-							{process.env.NEXT_PUBLIC_WHOP_APP_ID ? (
-								<a
-									href={`https://whop.com/apps/${process.env.NEXT_PUBLIC_WHOP_APP_ID}/install`}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="text-accent-9 hover:text-accent-10 underline"
-								>
-									Click here to install your app
-								</a>
-							) : (
-								<span className="text-amber-600">
-									Please set your environment variables to see the installation
-									link
-								</span>
-							)}
-						</p>
-					</div>
-				</div>
+          <div className="grid grid-cols-2 gap-3 mt-6">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-3">
+              <div className="text-xs text-slate-400 mb-1">SaaS & Apps</div>
+              <div className="text-lg font-semibold">Micro-SaaS</div>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-3">
+              <div className="text-xs text-slate-400 mb-1">Education</div>
+              <div className="text-lg font-semibold">Courses</div>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-3">
+              <div className="text-xs text-slate-400 mb-1">Community</div>
+              <div className="text-lg font-semibold">Memberships</div>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-3">
+              <div className="text-xs text-slate-400 mb-1">Content</div>
+              <div className="text-lg font-semibold">Newsletters</div>
+            </div>
+          </div>
+        </div>
 
-				<div className="mt-12 text-center text-2 text-gray-5">
-					<p>
-						Need help? Visit the{" "}
-						<a
-							href="https://dev.whop.com"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="text-accent-9 hover:text-accent-10 underline"
-						>
-							Whop Documentation
-						</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	);
+        <ChurnPredictionForm />
+      </div>
+    </main>
+  )
 }
