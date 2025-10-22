@@ -56,9 +56,7 @@ export function IntegrationSetup() {
       <div className="border-b border-border bg-card">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center">
-              <span className="text-white font-bold text-sm">D</span>
-            </div>
+            
             <span className="font-semibold text-lg">Dechurner</span>
           </Link>
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
