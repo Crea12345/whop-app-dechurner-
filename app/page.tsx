@@ -8,9 +8,7 @@ export default function Home() {
       <div className="border-b border-border bg-card">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-chart-2 flex items-center justify-center">
-              <span className="text-white font-bold text-sm">D</span>
-            </div>
+            
             <span className="font-semibold text-lg">Dechurner</span>
           </div>
           <Link href="/dashboard">
@@ -36,24 +34,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 mt-6">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-3">
-              <div className="text-xs text-slate-400 mb-1">SaaS & Apps</div>
-              <div className="text-lg font-semibold">Micro-SaaS</div>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-3">
-              <div className="text-xs text-slate-400 mb-1">Education</div>
-              <div className="text-lg font-semibold">Courses</div>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-3">
-              <div className="text-xs text-slate-400 mb-1">Community</div>
-              <div className="text-lg font-semibold">Memberships</div>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-3">
-              <div className="text-xs text-slate-400 mb-1">Content</div>
-              <div className="text-lg font-semibold">Newsletters</div>
-            </div>
-          </div>
+          
         </div>
 
         <ChurnPredictionForm />
