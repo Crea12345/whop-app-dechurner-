@@ -60,6 +60,15 @@ const PLATFORMS: Platform[] = [
     features: ["Contact sync", "Custom fields", "Workflow triggers"],
   },
   {
+    id: "skool",
+    name: "Skool",
+    description: "Community & course platform",
+    status: "disconnected",
+    color: "from-orange-500 to-red-500",
+    icon: "S",
+    features: ["Member data", "Engagement metrics", "Course completion", "Community activity"],
+  },
+  {
     id: "stripe",
     name: "Stripe",
     description: "Payment processing",

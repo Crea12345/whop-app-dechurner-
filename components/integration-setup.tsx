@@ -22,6 +22,13 @@ const PLATFORMS = [
     color: "from-blue-500 to-cyan-500",
   },
   {
+    id: "skool",
+    name: "Skool",
+    description: "Community & course platform",
+    status: "available",
+    color: "from-orange-500 to-red-500",
+  },
+  {
     id: "stripe",
     name: "Stripe",
     description: "Payment processing",
@@ -56,7 +63,6 @@ export function IntegrationSetup() {
       <div className="border-b border-border bg-card">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            
             <span className="font-semibold text-lg">Dechurner</span>
           </Link>
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
