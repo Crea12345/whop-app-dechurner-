@@ -12,9 +12,7 @@ export default function Home() {
             <span className="font-semibold text-lg">Dechurner</span>
           </div>
           <Link href="/dashboard">
-            <Button variant="outline" size="sm">
-              CRM Dashboard
-            </Button>
+            
           </Link>
         </div>
       </div>
